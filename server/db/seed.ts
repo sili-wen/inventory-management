@@ -1,8 +1,7 @@
 import "dotenv/config";
-import { drizzle } from "drizzle-orm/node-postgres";
 import fs from "fs/promises";
 import path from "path";
-import { Pool } from "pg";
+import { db } from "./db";
 
 // Import schemas
 import { expenseByCategory } from "./schema/expenseByCategory";
@@ -13,13 +12,6 @@ import { purchases } from "./schema/purchases";
 import { sales } from "./schema/sales";
 import { salesSummary } from "./schema/salesSummary";
 import { users } from "./schema/users";
-
-// Database connection
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL!,
-});
-
-const db = drizzle(pool);
 
 // Helper function to read JSON files
 async function readJsonFile<T>(filename: string): Promise<T[]> {
@@ -183,8 +175,6 @@ async function seed() {
   } catch (error) {
     console.error("❌ Error seeding database:", error);
     throw error;
-  } finally {
-    await pool.end();
   }
 }
 
