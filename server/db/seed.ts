@@ -4,13 +4,13 @@ import path from "path";
 import { db } from "./db";
 
 // Import schemas
-import { expenseByCategory } from "./schema/expenseByCategory";
+import { expenseByCategory } from "./schema/expense-by-category";
 import { expenses } from "./schema/expenses";
 import { expenseSummary } from "./schema/expense-summary";
 import { products } from "./schema/products";
 import { purchases } from "./schema/purchases";
 import { sales } from "./schema/sales";
-import { salesSummary } from "./schema/salesSummary";
+import { salesSummary } from "./schema/sales-summary";
 import { users } from "./schema/users";
 
 // Helper function to read JSON files
