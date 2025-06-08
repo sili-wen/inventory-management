@@ -1,8 +1,8 @@
-export default {
+module.exports = {
   apps: [
     {
       name: "inventory-management",
-      script: "pnpm",
+      script: "npm",
       args: "run dev",
       env: {
         NODE_ENV: "development",
