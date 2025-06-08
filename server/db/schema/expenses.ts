@@ -1,5 +1,5 @@
 import { integer, pgTable } from "drizzle-orm/pg-core";
-import { auditColumns, id } from "./columns";
+import { auditColumns, id } from "./columns.js";
 import { varchar } from "drizzle-orm/pg-core";
 
 export const expenses = pgTable("expenses", {

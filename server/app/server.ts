@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import Fastify from "fastify";
 import { ulid } from "ulid";
-import app from "~/app.ts";
+import app from "./app.js";
 
 dotenv.config();
 
