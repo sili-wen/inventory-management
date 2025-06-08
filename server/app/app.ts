@@ -22,8 +22,8 @@ export const app = async (fastify: FastifyInstance) => {
   fastify.register(swagger, {
     openapi: {
       info: {
-        title: "Learning Management API Documentation",
-        description: "REST API for Learning Management application",
+        title: "Inventory Management API Documentation",
+        description: "REST API for Inventory Management application",
         version: "1.0.0",
       },
     },
@@ -34,7 +34,7 @@ export const app = async (fastify: FastifyInstance) => {
   fastify.register(apiReference, {
     routePrefix: "/reference",
     configuration: {
-      pageTitle: "Learning Management",
+      pageTitle: "Inventory Management",
       defaultHttpClient: {
         targetKey: "node",
         clientKey: "fetch",
