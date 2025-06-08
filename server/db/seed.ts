@@ -6,7 +6,7 @@ import { db } from "./db";
 // Import schemas
 import { expenseByCategory } from "./schema/expenseByCategory";
 import { expenses } from "./schema/expenses";
-import { expenseSummary } from "./schema/expenseSummary";
+import { expenseSummary } from "./schema/expense-summary";
 import { products } from "./schema/products";
 import { purchases } from "./schema/purchases";
 import { sales } from "./schema/sales";

@@ -1,6 +1,6 @@
 import { integer, pgTable, varchar } from "drizzle-orm/pg-core";
 import { auditColumns, id } from "./columns";
-import { expenseSummary } from "./expenseSummary";
+import { expenseSummary } from "./expense-summary";
 
 export const expenseByCategory = pgTable("expense_by_category", {
   ...id("exp_cat"),
