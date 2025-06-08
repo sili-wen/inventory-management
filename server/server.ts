@@ -3,7 +3,7 @@ import fastify from "fastify";
 
 dotenv.config();
 
-const port = Number(process.env.PORT) || 8080;
+const port = Number(process.env.PORT);
 
 const server = fastify();
 
