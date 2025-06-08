@@ -3,7 +3,7 @@ import { auditColumns, id } from "./columns";
 
 export const expenseSummary = pgTable("expense_summary", {
   ...id("exp_sum"),
-  totalExpenses: numeric("total_expense", { precision: 3 })
+  totalExpenses: numeric("total_expenses", { precision: 3 })
     .notNull()
     .default("0"),
   ...auditColumns(),
