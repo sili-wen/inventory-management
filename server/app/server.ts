@@ -1,7 +1,8 @@
 import dotenv from "dotenv";
 import Fastify from "fastify";
 import { ulid } from "ulid";
-import app from "./app.js";
+import app from "./app";
+import logger from "./lib/logger";
 
 dotenv.config();
 
@@ -10,6 +11,7 @@ const port = Number(process.env.PORT) || 8080;
 const fastify = Fastify({
   bodyLimit: 100 * 1024 * 1024,
   requestIdLogLabel: "requestId",
+  logger,
   genReqId(): string {
     return `req-${ulid()}`;
   },
